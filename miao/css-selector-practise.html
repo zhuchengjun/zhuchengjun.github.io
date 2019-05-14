@@ -21,7 +21,7 @@
       p[class="a c"] > span {
         color: red;
       }
-      p[class="a c"] > span > span {
+      p[class="a c"] > span > span:first-child{
         color: green;
       }
       p[class="a c"] > span > span + span {
@@ -51,13 +51,7 @@
       .b ul li:nth-child(n+35):nth-child(-n+50) {
         color: blue;
       }
-      .prime ul li:nth-of-type(2n):not(:nth-of-type(2)) {
-        color: red;
-      }
-      .prime ul li:nth-of-type(3n):not(:nth-of-type(3)) {
-        color: red;
-      }
-      .prime ul li:nth-of-type(5n):not(:nth-of-type(5)) {
+      .prime ul li:nth-child(2n+4),.prime li:nth-child(3n+6) {
         color: red;
       }
 

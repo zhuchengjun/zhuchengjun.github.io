@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS-BLOCK-LAYOUT</title>
+  <style>
+    body {
+          margin: 0px;
+      }
+    div.biaoti {
+        background-color: black;
+    }
+    div.biaoti section {
+        width: 600px;
+        margin: auto;
+        color:  white;
+    }
+    p {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 16px;
+        margin-top: 15px;
+    }
+    main {
+        width: 600px;
+        margin: 15px auto;
+    }
+    main.biaoge div {
+        width: 180px;
+        height: 40px;
+        background-color: pink;
+        border: 3px solid black;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        text-align: center;
+        line-height: 34px;
+        
+    }
+    main.biaoge div:nth-child(3n+2) {
+        margin-left: 210px;
+        margin-top: -55px;
+    }
+    main.biaoge div:nth-child(3n+3) {
+        margin-left: 420px;
+        margin-top: -55px;
+    }
+    main.biaoge div:hover {
+        background-color: red;
+    }
+    main.lianjie {
+        width: 600px;
+        margin: 15px auto;
+    }
+    main.lianjie div {
+        background-color: white;
+        border-bottom: 1px dotted black;
+    }
+    main.lianjie div:last-child {
+        border-bottom: none;
+    }
+    div.jiewei {
+        background-color: #ee82ee;
+        margin-top: 16px;
+    }
+    div.jiewei section {
+        text-align: center;
+    }
+    div.jiewei p {
+        margin: 0px auto;
+        padding: 0px;
+
+    }
+  </style>
+</head>
+<body>
+  <div class="biaoti">
+    <section>
+      hello world 请调整浏览器窗口大小查看效果
+    </section>
+  </div>
+  <p>
+    页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 
+    页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 
+    页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 
+    页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 
+    页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 
+    页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+  </p>
+  <main class="biaoge">
+      <div>宽180高40(包含边框)</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div>水平间隙30px</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div>垂直间隙15px</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div>边框宽度3px</div>
+      <div>产品</div>
+      <div>产品</div>
+  </main>
+  <main class="lianjie"> 
+      <div>link</div>
+      <div>link</div>
+      <div>link</div>
+      <div>link</div>
+      <div>link</div>
+  </main>
+  <div class="jiewei">
+      <section>
+          <p>&copy版权所有</p>
+          <p>本页所有布局均使用块元素</p>
+      </section>
+  </div>
+</body>
+</html>
