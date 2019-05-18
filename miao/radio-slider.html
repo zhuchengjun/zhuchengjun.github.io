@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RADIO SLIDER</title>
+    <style>
+        .aa{
+            width: 400px;
+            height: 200px;
+            border: 3px solid;
+            position: relative;
+        }
+        .aa .bb {
+            position: absolute;
+            top: 210px;
+            right: 10px;
+        }
+        .aa input {
+            display: none;
+        }
+        .aa .bb label {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border: 2px solid black;
+            border-radius: 999px;
+        }
+        .aa img {
+            position: absolute;
+            top: 0px;
+            opacity: 0;
+            transition: 1s;
+            width: 100%;
+            height: 100%;
+        }
+        .aa input:checked + img {
+            opacity: 1;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="aa"> 
+        <div class="bb">
+            <label for="a1"></label>
+            <label for="a2"></label>
+            <label for="a3"></label>
+            <label for="a4"></label>
+        </div>
+            <input checked type="radio" name="choose" id="a1">
+            <img src="https://i1.mifile.cn/a4/xmad_15581080639991_OvUlB.jpg" alt="">
+            <input type="radio" name="choose" id="a2">
+            <img src="https://i1.mifile.cn/a4/xmad_15581082003113_LbhJR.jpg" alt="">
+            <input type="radio" name="choose" id="a3">
+            <img src="https://i1.mifile.cn/a4/xmad_15564338641384_lOsBK.jpg" alt="">
+            <input type="radio" name="choose" id="a4">
+            <img src="https://i1.mifile.cn/a4/xmad_15476942061027_STEvM.jpg" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IOS CHECKBOX</title>
+    <style>
+        input {
+            visibility: hidden;
+        }
+        label {
+            display: inline-block;
+            width: 270px;
+            height: 156px;
+            border: 3px solid #ddd;
+            box-sizing: border-box;
+            padding: 4px;
+            background-color: #ddd;
+            border-radius: 999px;
+            transition: 0.6s;
+            cursor: pointer;
+        }
+        label::before {
+            content: '';
+            display:inline-block;
+            width: 140px;
+            height: 140px;
+            background-color: white;
+            border-radius: 999px;
+            transition: 0.6s;
+        }
+        input:checked + label {
+            background-color: #30f34c;
+            border-color: #30f34c;
+        }
+        input:checked + label::before {
+            margin-left: 120px;
+        }
+    
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="ck">
+    <label for="ck"></label>
+</body>
+</html>

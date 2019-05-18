@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS-MENU</title>
+    <style>
+        ul {
+            padding: 0px;
+            list-style: none;
+            position: absolute;
+        }
+        ul.menu > li {
+            float: left;
+            padding: 0px 20px;
+        }
+        ul.menu > li > ul {
+            top: 100%;
+            left: 0px;
+        }
+        ul.menu > li > ul::before {
+            content: none;
+        }
+        ul li {
+            position: relative;
+            padding-right: 40px;
+            white-space: nowrap;
+        }
+        li:hover {
+            background-color: pink;
+        }        
+        li:hover > ul > li {
+            /* display: block; */
+            opacity: 1;
+            pointer-events: auto;
+        }
+        ul ul::before{
+            content: '>';
+            position: absolute;
+            left: -1em;
+        }
+        ul ul li {
+            opacity: 0;
+            transition: opacity 0.06s;
+        }        
+        ul ul {
+            /* display: none; */
+            position: absolute;
+            top: 0px; 
+            left: 100%;
+            pointer-events: none;
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>文件
+            <ul>
+                <li>打开文件</li>
+                <li>保存
+                    <ul>
+                        <li>UTF-8</li>
+                        <li>ANSI</li>
+                        <li>UTF-8 with BOM</li>
+                    </ul>
+                </li>
+                <li>另存为</li>
+            </ul>
+        </li>
+        <li>编辑</li>
+        <li>选择</li>
+        <li>查看</li>
+    </ul>
+
+</body>
+</html>
