@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>oald-layout</title>
+    <style>
+        html,body {
+            margin: 0px;
+            height: 100%;
+        }
+        div.oald-layout {
+            height: 100%;
+            font-size: 0px;
+        }
+        div * {
+            font-size: 16px;
+        }
+        div aside{
+            width: 20%;
+            height: 100%;
+            display: inline-block;
+        }
+        div main {
+            height: 100%;
+            width: 40%;
+            display: inline-block;
+            position: relative;
+        }
+        .a {
+            background-color: aqua;
+        }
+        .b {
+            background-color: lightgreen;
+        }
+        .c {
+            background-color: lightblue;
+        }
+        header {
+            width: 100%;
+            background-color: #ccc;
+        }
+        header .placeholder {
+            padding-top: 20%;
+        }
+        main .content {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin-top: 20%;
+            background-color: #cdd;
+        }
+    </style>
+</head>
+<body>
+    <div class="oald-layout">
+        <aside class="a"></aside>
+        <main>
+            <header>
+                <div class="placeholder"></div>
+            </header>
+            <div class="content"></div>
+        </main>
+        <aside class="b"></aside>
+        <aside class="c"></aside>
+    </div>
+</body>
+</html>

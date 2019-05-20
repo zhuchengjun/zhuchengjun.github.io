@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>oald-layout-position</title>
+    <style>
+        html,body {
+            margin: 0px;
+            height: 100%;
+        }
+        div {
+            height: 100%;
+            font-size: 0px;
+            position: relative;
+        }
+        div * {
+            font-size: 16px;
+        }
+        .a {
+            position: absolute;
+            height: 100%;
+            width: 20%;
+            background-color: aqua;
+        }
+        header {
+            position: absolute;
+            height: 10%;
+            width: 40%;
+            left: 20%;
+            display: inline-block;
+            background-color: #ccc;
+        }
+        main {
+            position: absolute;
+            height: 90%;
+            width: 40%;
+            top: 10%;
+            bottom: 0;
+            left: 20%;
+            display: inline-block;
+            background-color: #cdd;
+        }       
+        .b {
+            position: absolute;
+            height: 100%;
+            width: 20%;
+            top: 0;
+            left: 60%;
+            background-color: lightgreen;
+        }
+        .c {
+            position: absolute;
+            height: 100%;
+            width: 20%;
+            top: 0;
+            left: 80%;
+            background-color: lightblue;
+        }    
+    </style>
+</head>
+<body>
+    <div>
+        <aside class="a"></aside>
+        <header></header>
+        <main></main>
+        <aside class="b"></aside>
+        <aside class="c"></aside>
+    </div>
+</body>
+</html>

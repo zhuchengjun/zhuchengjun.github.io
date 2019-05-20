@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 子元素宽高未知，用inline-block */
+        div.a {
+            border: 3px solid pink;
+            min-height: 150px;
+            line-height: 150px;
+        }
+        span.a {
+            line-height: normal;
+            display: inline-block;
+            border: 3px solid lightgreen;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <span class="a">
+            to suddenly appear or become obvious after having been hidden for a while
+        </span>
+    </div>
+</body>
+</html>
