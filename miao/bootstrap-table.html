@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOOTSTRP-TABLE</title>
+    <style>
+        table.table {
+            border-collapse: separate;
+            border-spacing: 0px;
+        }
+        table.table tr th { 
+            border-top: 1px solid rgb(222,226,230);
+            padding: 10px;
+            width: 20px;
+        }
+        table.table tr td { 
+            border-top: 1px solid rgb(222,226,230);
+            xborder-bottom: 1px solid rgb(222,226,230);
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+        }
+        table.table tr td:nth-last-child(1) {
+            border-bottom: none;
+        }
+        table.table tr td:nth-last-child(2) {
+            border-bottom: none;
+        }
+        table.table tr td:nth-last-child(3) {
+            border-bottom: none;
+        }
+        table.table-dark {
+            background-color: rgb(52,58,64);
+            color: white;
+        } 
+        table.table-dark tr td {
+            border-color: rgb(69,77,85);
+        }
+        table.table-dark tr th {
+            border-color: rgb(69,77,85);
+        }
+        table thead.thead-dark tr th {
+            background-color: rgb(52,58,64);           
+        }
+        table thead.thead-light tr th {
+            background-color: rgb(233,236,239);           
+        }
+        table.table-striped tbody tr:nth-child(odd) {
+            background-color: rgb(233,236,239);
+        }
+        table.table-striped.table-dark tbody tr:nth-child(odd) {
+            background-color: rgb(62,68,74);
+        }
+        table.table-bordered tr th {
+            border: 1px solid rgb(222,226,230);           
+        }
+        table.table-bordered.table tr td {
+            border: 1px solid rgb(222,226,230);            
+        }
+        table.table-bordered.table-dark tr th {
+            border: 1px solid rgb(69,77,85);           
+        }
+        table.table-bordered.table.table-dark tr td {
+            border: 1px solid rgb(69,77,85);            
+        }
+        table.table.table-borderless tr th {
+            border-top: none;
+        }
+        table.table.table-borderless tr td {
+            border-top: none;
+        }
+        table.table-hover tbody tr:hover {
+            background-color: rgb(233,236,239);
+        }table.table-hover.table-dark tbody tr:hover {
+            background-color: rgb(69,77,85);
+        }
+        table.table-sm tr td {
+            padding: 5px;
+        }
+        table.table-sm tr th {
+            padding: 5px;
+        }
+        table.table tbody tr.table-avtive {
+            background-color: rgb(218,218,218);
+        }
+        table.table  tbody tr.table-primary {
+            background-color: rgb(184,218,255);
+        }
+        table.table tbody tr.table-secondary {
+            background-color: rgb(214,216,219);
+        }
+    </style>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Tharnton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
