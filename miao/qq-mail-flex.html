@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>qq-mail-flex</title>
+    <style>
+        * {
+            margin: 0;
+            width: 100vw;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        header {
+            height: 66px;
+            width: 100vw;
+            background-image: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/logo/logo_0_01f1927.png);
+            background-repeat: no-repeat;
+        }
+        aside {
+            width: 194px;
+            height: calc(100% - 66px);
+            border: 8px solid rgb(137,181,233);
+        }
+        main {
+            width: calc(100vw - 194px);
+            height: calc(100% - 66px);
+            border-top: 8px solid rgb(137,181,233);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header></header>
+        <aside></aside>
+        <main></main>
+    </div>
+</body>
+</html>
