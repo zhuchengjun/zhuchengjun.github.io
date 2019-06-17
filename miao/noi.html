@@ -668,15 +668,15 @@
 </script>
 
 <script id="ch0105/25">
-    const a 
-    const b 
-    const c 
+    var a = 0
+    var b = 0
+    var c = 0
     for(var i = 100;i <= 999;i ++){
         a = i
         b = a.toString(7)
         c = a.toString(9)
         if((Math.trunc(b/100))==(c%100%10) && Math.trunc(b%100/10)== Math.trunc(c%100/10) && (Math.trunc(c/100))==(b%100%10)){
-            console.log(a)
+            console.log(a.toString(10))
             console.log(b)
             console.log(c)
         }   
