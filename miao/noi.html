@@ -668,7 +668,7 @@
 </script>
 
 <script id="ch0105/25">
-    var a = ''
+    var a = 0
     var b = ''
     var c = ''
     for(var i = 100;i <= 999;i ++){
@@ -781,10 +781,38 @@
 </script>
 
 <script id="ch0105/31">
-    
+    var n = + prompt("灯")
+    var m = + prompt("人")
+    var a = 1
+    for(var i = 1;i <= m;i ++){
+        if(i == 1){
+            for(var j = 1;j <= n;j ++){
+                a = -a
+                var x = a * j
+            }
+        }else if(i == 2){
+            for(j = 1;j <= n;j ++){
+                if(j % 2 == 0)
+                x = -a
+            }
+        }
+        
+    }
 </script>
 
 <script id="ch0105/32">
+    var p = 1
+    var q = 2
+    var a
+    var b = q / p
+    var n = + prompt()
+    for(var i = 1;i < n;i ++){
+        a = p + q
+        p = q
+        q = a
+        b = b + q / p
+    }
+    console.log(b.toFixed(4))
 </script>
 
 <script id="ch0105/33">
