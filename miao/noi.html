@@ -816,27 +816,103 @@
 </script>
 
 <script id="ch0105/33">
+    var n = + prompt()
+    var a = -1
+    var b = 0
+    for(var i = 1;i <= n;i ++){
+        a = -a
+        b = b + 1 / i * a
+    }
+    console.log(b.toFixed(4))
 </script>
 
 <script id="ch0105/34">
+    var n = + prompt()
+    var a = 0
+    var b = 1
+    for(var i = 1;i <= n;i ++){
+        for(var j = 1; j <= i;j ++){
+            b = b * j
+        }
+        a = a + b
+        b = 1
+    }
+    console.log(a)
 </script>
 
 <script id="ch0105/35">
+    var n = + prompt()
+    var a = 0
+    var b = 1
+    var c = 1
+    for(var i = 1;i <= n;i ++){
+        for(var j = 1; j <= i;j ++){
+            b = b * j
+        }
+        a = b
+        b = 1
+        c = c + 1 / a
+    }
+    console.log(c.toFixed(10))
 </script>
 
 <script id="ch0105/36">
+    var x = + prompt()
+    var n = + prompt()
+    var a = 1
+    var b = x
+    for(var j = 1;j <= n; j ++){
+        for(var i = 1;i <= (j - 1);i ++){
+            b = b * x
+        }
+        a = a + b
+        b = x
+    }
+    console.log(a.toFixed(2))
 </script>
 
 <script id="ch0105/37">
+    var M = + prompt()
+    var N = + prompt()
+    var X = + prompt()
+    var n = N
+    var m = M
+    var x 
+    for(var i = 1;i <= M;i ++){
+      
+    }      
 </script>
 
 <script id="ch0105/38">
+
 </script>
 
 <script id="ch0105/39">
+    var n = + prompt()
+    var s = 0
+    for(var j = 1;j <= n;j ++){
+        var x = j
+        for(var i = 1;i <= 10;i ++){
+            var M = x
+            if(i == 1){
+                var y = M % 10
+                if(y != 7 && x % 7 != 0)
+                s = s + x * x
+                break;
+            }else
+            y = (Math.trunc(M / 10)) % 10
+            if(y != 7 && x % 7 != 0)
+            s = s + x * x
+            M = Math.trunc(M / 10)
+            if(M < 10)
+            break;
+        }
+    }
+    console.log(s)
 </script>
 
 <script id="ch0105/40">
+    
 </script>
 
 <script id="ch0105/41">
