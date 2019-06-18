@@ -667,7 +667,7 @@
     console.log(j)
 </script>
 
-<script id="ch0105/25">
+<!-- <script id="ch0105/25">
     var a = 0
     var b = ''
     var c = ''
@@ -680,6 +680,20 @@
             console.log(b)
             console.log(c)
         }   
+    }
+</script> -->
+
+<script id="ch0105/25">
+    for(var n = 49;n <= (9*9*9-1);n ++){
+        var seven1 = n % 7
+        var seven2 = (n - seven1) / 7 % 7
+        var seven3 = ((n - seven1) / 7 - seven2) / 7 % 7
+        var nine1 = n % 9
+        var nine2 = (n - nine1) / 9 % 9
+        var nine3 = ((n - nine1) / 9 - nine2) / 9 % 9
+        if(seven1 == nine3 && seven2 == nine2 && seven3 == nine1){
+            console.log(n,''+seven3+seven2+seven1,''+nine3+nine2+nine1)
+        }
     }
 </script>
 
@@ -881,7 +895,13 @@
 </script>
 
 <script id="ch0105/38">
-
+    var n = + prompt()
+    var fx = 0
+    for(var i = 0;i < n;i ++){
+        if(i == 0){
+            fx = 1
+        }
+    }
 </script>
 
 <script id="ch0105/39">
