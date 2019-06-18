@@ -708,25 +708,71 @@
 
 <script id="ch0105/28">
     var a = + prompt()
-    var i = 0
-    while(a >= 1){
-        a = a/10
-        i ++
+    var x = a
+    var c = ''
+    for(var i = 1;i <= 10;i ++){
+        if(i == 1){
+            var b = x % 10 + ' '   
+        }
+        var y = (Math.trunc(x / 10)) % 10
+        c = c + y + ' '
+        x = Math.trunc(x / 10)
+        if(x < 10) 
+        break;       
     }
-    for(var j = 0;j < i;j ++){
-        a = a / 10
-        
-        console.log()
-    }
+    console.log(b + c)
 </script>
 
 <script id="ch0105/29">
+    var a = + prompt()
+    var f = 1
+    if(a < 0){
+        f = -f
+        a = -a
+    }
+    var x = a
+    var b = ''
+    var c = ''
+    for(var i = 1;i <= 10;i ++){
+        if(i == 1){
+            b = x % 10  
+        }
+        var y = (Math.trunc(x / 10)) % 10
+        c = c + y
+        x = Math.trunc(x / 10)
+        if(x < 10) 
+        break;       
+    }
+    console.log((b + c) * f)
 </script>
 
 <script id="ch0105/30">
+    var m = + prompt()
+    var k = + prompt()
+    var M = m
+    var x = 0
+    var j = 0
+    for(var i = 1;i <= 10;i ++){
+        if(i == 1){
+            y = M % 10
+            if(y == 3)
+            j ++
+        }else
+        y = (Math.trunc(M / 10)) % 10
+        if(y == 3)
+        j ++
+        M = Math.trunc(M / 10)
+        if(M < 10)
+        break;
+    }
+    if(m % 19 == 0 && j == k)
+    console.log("YES")
+    else
+    console.log("NO")
 </script>
 
 <script id="ch0105/31">
+    
 </script>
 
 <script id="ch0105/32">
