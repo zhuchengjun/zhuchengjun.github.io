@@ -801,6 +801,7 @@
 <script id="ch0105/31">
     var n = + prompt("灯")
     var m = + prompt("人")
+    var s = ''
     for(var i = 1;i <= n;i ++){
         var f = true
         for(var j = 1;j <= m;j ++){
@@ -808,10 +809,12 @@
                 f = !f
             }
         }
-        if(!f){
-            console.log(i)
+        if(!f && i != 1){
+            s = s + ',' + i
+            
         }
     }
+    console.log(1 + s)
 </script>
 
 <script id="ch0105/32">
