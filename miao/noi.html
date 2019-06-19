@@ -695,6 +695,10 @@
             console.log(''+n,''+seven3+seven2+seven1,''+nine3+nine2+nine1)
         }
     }
+    // eg: 128 / 6 = 21 ... 2
+    // eg: 21 / 6 = 3 ... 3
+    // eg: 3 / 6 = 0 ... 3
+    // 128 => 332
 </script>
 
 <script id="ch0105/26">
@@ -797,20 +801,16 @@
 <script id="ch0105/31">
     var n = + prompt("灯")
     var m = + prompt("人")
-    var a = 1
-    for(var i = 1;i <= m;i ++){
-        if(i == 1){
-            for(var j = 1;j <= n;j ++){
-                a = -a
-                var x = a * j
-            }
-        }else if(i == 2){
-            for(j = 1;j <= n;j ++){
-                if(j % 2 == 0)
-                x = -a
+    for(var i = 1;i <= n;i ++){
+        var f = true
+        for(var j = 1;j <= m;j ++){
+            if(i % j == 0){
+                f = !f
             }
         }
-        
+        if(!f){
+            console.log(i)
+        }
     }
 </script>
 
@@ -889,17 +889,29 @@
     var M = + prompt()
     var N = + prompt()
     var X = + prompt()
-    for(var i = 1;i <= M;i ++){
-      
-    }      
+    while(X >= 0){
+        X = X - Math.ceil(M / N)
+        if(X < 0 || N > M){
+            break;
+        }
+        N = N + Math.floor(M / N)
+    }
+    console.log(N)   
 </script>
 
 <script id="ch0105/38">
     var n = + prompt()
-    var fx = 0
     for(var i = 0;i < n;i ++){
-        if(i == 0){
-            fx = 1
+        var a = + prompt()
+        for(var j = a;j >= 0;j --){
+            var b = + prompt()
+            if(a == 0){
+                console.log(0)
+                break;
+            }
+            if(j == 0)
+            break;
+            console.log(j * b)
         }
     }
 </script>
@@ -976,35 +988,32 @@
 </script>
 
 <script id="ch0105/42">
-    var a = + prompt()
-    var b = + prompt()
+    var a = + prompt("行")
+    var b = + prompt("列")
     var c = prompt()
     var d = + prompt()
-    var m = ''
-    for(var i = 1;i <= b;i ++){
-        if((i == 1 || i == b) && d == 0){
-            for(var j = 1;j <= a;j ++){
+    for(var i = 1;i <= a;i ++){
+        var m = ''
+        if((i == 1 || i == a) && d == 0){
+            for(var j = 1;j <= b;j ++){
                 m = m + c
             }
             console.log(m)
-            m = ''
         }
-        if((i > 1 && i < b) && d == 0){
-            for(j = 1;j <= a;j ++){
-                if(j == 1 || j == a){
+        if((i > 1 && i < a) && d == 0){
+            for(j = 1;j <= b;j ++){
+                if(j == 1 || j == b){
                     m = m + c
                 }else
                 m = m + ' '
             }
             console.log(m)
-            m = ''
         }
         if(d == 1){
-            for(j = 1;j <= a;j ++){
+            for(j = 1;j <= b; j ++){
                 m = m + c
             }
             console.log(m)
-            m = ''
         }
     }
 </script>
