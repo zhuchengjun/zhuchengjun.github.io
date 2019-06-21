@@ -1,84 +1,205 @@
+<script id="7">
+    var isRelatedwith7 = function (n) {
+        if (n % 7 == 0) {
+            return true
+        } else {
+            while (n > 0) {
+                var digit = n % 10
+                if (digit == 7) {
+                    return true
+                }
+                n = (n - digit) / 10
+            }
+            return false
+        }
+    }
+    var N = + prompt()
+    if (isRelatedwith7(N))
+        console.log("YES")
+    else
+        console.log("NO")
+</script>
+<script id="sort">
+    var a = + prompt()
+    var b = + prompt()
+    var c = + prompt()
+
+</script>
+<script id="narcissistic">//判断数是否是水仙花数
+    var n = + prompt()
+    var m = n
+    var width = 0
+    while (m > 0) {
+        width++
+        var digit = m % 10
+        m = (m - digit) / 10
+    }
+    m = n
+    var sum = 0
+    var product = 1
+    while (m > 0) {
+        var digit = m % 10
+        for (var i = 1; i <= width; i++) {
+            product = product * digit
+        }
+        sum = sum + product
+        m = (m - digit) / 10
+    }
+    if (sum = n)
+        console.log("YES")
+    else
+        console.log("NO")   
+</script>
+<script id="narcissistics">
+    for (var j = 1; j < 10000; j++) {
+        var n = j
+        var m = n
+        var width = 0
+        while (m > 0) {
+            width++
+            var digit = m % 10
+            m = (m - digit) / 10
+        }
+        m = n
+        var sum = 0
+        var product = 1
+        while (m > 0) {
+            var digit = m % 10
+            for (var i = 1; i <= width; i++) {
+                product = product * digit
+            }
+            sum = sum + product
+            m = (m - digit) / 10
+        }
+        if (sum = n)
+            console.log(n)
+    }
+</script>
+<script id="prime">
+    var isPrime = function (n) {
+        if (n < 2)
+            return false
+        for (var i = 2; i < n; i++) {
+            if (n % i == 0)
+                return false
+        }
+        return true
+    }
+    var N = + prompt()
+    if (isPrime(N))
+        console.log("YES")
+    else
+        console.log("NO")
+</script>
+<script id="primes">
+    for (var i = 1; i <= 100; i++) {
+        if (isPrime(i))
+            console.log(i)
+    }
+</script>
+<script id="itob">
+    var isString = function (n) {
+        var s = n.toString()
+        return s
+    }
+    var n = + prompt()
+    console.log(isString(n))
+</script>
+<script id="lcf&lcm">
+
+</script>
+<script id="sqrt">
+    var a = + prompt()
+    var b = Math.sqrt(a)
+    console.log(b.toFixed(3))
+</script>
+
+
+
+
+
+
 <script id="ch0103/01">
-    var A = + prompt("A","1")
-    var B = + prompt("B","2")
+    var A = + prompt("A", "1")
+    var B = + prompt("B", "2")
     console.log(A + B)
 </script>
 
 <script id="ch0103/02">
-    var a = + prompt("a","2")
-    var b = + prompt("b","3")
-    var c = + prompt("c","5")
+    var a = + prompt("a", "2")
+    var b = + prompt("b", "3")
+    var c = + prompt("c", "5")
     console.log((a + b) * c)
 </script>
 
 <script id="ch0103/03">
-    var a = + prompt("a","1")
-    var b = + prompt("b","1")
-    var c = + prompt("c","3")
+    var a = + prompt("a", "1")
+    var b = + prompt("b", "1")
+    var c = + prompt("c", "3")
     console.log(Math.trunc((a + b) / c))
 </script>
 
 <script id="ch0103/04">
-    var a = + prompt("被除数","10")
-    var b = + prompt("除数","3")
+    var a = + prompt("被除数", "10")
+    var b = + prompt("除数", "3")
     console.log(Math.trunc(a / b) + ' ' + (a % b))
 </script>
 
 <script id="ch0103/05">
-    var a = + prompt("分子a","5")
-    var b = + prompt("分母b","7")
+    var a = + prompt("分子a", "5")
+    var b = + prompt("分母b", "7")
     console.log((a / b).toFixed(9))
 </script>
 
 <script id="ch0103/06">
-    var a = + prompt("确诊数","10433")
-    var b = + prompt("死亡数","60")
+    var a = + prompt("确诊数", "10433")
+    var b = + prompt("死亡数", "60")
     console.log((b / a * 100).toFixed(3) + "%")
 </script>
 
 <script id="ch0103/07">
-    var x = + prompt("x","2.31")
-    var a = + prompt("a","1.2")
-    var b = + prompt("b","2")
-    var c = + prompt("c","2")
-    var d = + prompt("d","3")
+    var x = + prompt("x", "2.31")
+    var a = + prompt("a", "1.2")
+    var b = + prompt("b", "2")
+    var c = + prompt("c", "2")
+    var d = + prompt("d", "3")
     console.log((a * x * x * x + b * x * x + c * x + d).toFixed(7))
 </script>
 
 <script id="ch0103/08">
-    var F = + prompt("华氏温度","41")
+    var F = + prompt("华氏温度", "41")
     var C = 5 * (F - 32) / 9
     console.log(C.toFixed(5))
 </script>
 
 <script id="ch0103/09">
-    var r = + prompt("r","3.0")
+    var r = + prompt("r", "3.0")
     var a = 3.14159
-    console.log((2 * r).toFixed(4),(2 * a * r).toFixed(4),(a * r * r).toFixed(4))
+    console.log((2 * r).toFixed(4), (2 * a * r).toFixed(4), (a * r * r).toFixed(4))
 </script>
 
 <script id="ch0103/10">
-    var r1 = + prompt("r1","1")
-    var r2 = + prompt("r2","2")
+    var r1 = + prompt("r1", "1")
+    var r2 = + prompt("r2", "2")
     var R = 1 / (1 / r1 + 1 / r2)
     console.log(R.toFixed(2))
 </script>
 
 <script id="ch0103/11">
-    var a = + prompt("a","73.263")
-    var b = + prompt("b","0.9973")
+    var a = + prompt("a", "73.263")
+    var b = + prompt("b", "0.9973")
     console.log((a % b).toFixed(4))
 </script>
 
 <script id="ch0103/12">
-    var r = + prompt("r","4")
+    var r = + prompt("r", "4")
     var b = 3.14
     var V = 4 / 3 * b * r * r * r
     console.log(V.toFixed(2))
 </script>
 
 <script id="ch0103/13">
-    var a = + prompt("a","100")
+    var a = + prompt("a", "100")
     var b = a % 100 % 10
     var c = a % 100 / 10
     var d = a / 100
@@ -86,275 +207,275 @@
 </script>
 
 <script id="ch0103/14">
-    var h = + prompt("h","23")
-    var r = + prompt("r","11")
+    var h = + prompt("h", "23")
+    var r = + prompt("r", "11")
     var v = r * r * Math.PI * h / 1000
     console.log(Math.ceil(20 / v))
 </script>
 
 <script id="ch0103/15">
-    var n = + prompt("n","10")
-    var x = + prompt("x","4")
-    var y = + prompt("y","9")
+    var n = + prompt("n", "10")
+    var x = + prompt("x", "4")
+    var y = + prompt("y", "9")
     console.log(Math.trunc(n - y / x))
 </script>
 
 <script id="ch0103/16">
-    var Xa = + prompt("Xa","1"), Ya = + prompt("Ya","1")
-    var Xb = + prompt("Xb","2"),Yb = + prompt("Yb","2")
-    console.log((Math.sqrt((Xb - Xa) * (Xb -Xa) + (Yb - Ya) * (Yb - Ya))).toFixed(3))
+    var Xa = + prompt("Xa", "1"), Ya = + prompt("Ya", "1")
+    var Xb = + prompt("Xb", "2"), Yb = + prompt("Yb", "2")
+    console.log((Math.sqrt((Xb - Xa) * (Xb - Xa) + (Yb - Ya) * (Yb - Ya))).toFixed(3))
 </script>
 
 <script id="ch0103/17">
-    var x1 = + prompt("x1","0")
-    var y1= + prompt("y1","0")
-    var x2= + prompt("x2","4")
-    var y2= + prompt("y2","0")
-    var x3= + prompt("x3","0")
-    var y3= + prompt("y3","3")
+    var x1 = + prompt("x1", "0")
+    var y1 = + prompt("y1", "0")
+    var x2 = + prompt("x2", "4")
+    var y2 = + prompt("y2", "0")
+    var x3 = + prompt("x3", "0")
+    var y3 = + prompt("y3", "3")
     console.log(((x1 * y2 + x2 * y3 + x3 * y1 - x1 * y3 - x2 * y1 - x3 * y2) / 2).toFixed(2))
-    
+
 </script>
 
 <script id="ch0103/18">
-    var a1 = + prompt("a1","1")
-    var a2 = + prompt("a2","4")
-    var n = + prompt("n","100")
-    console.log((a1 + (n -1) * (a2 - a1)))
+    var a1 = + prompt("a1", "1")
+    var a2 = + prompt("a2", "4")
+    var n = + prompt("n", "100")
+    console.log((a1 + (n - 1) * (a2 - a1)))
 </script>
 
 <script id="ch0103/19">
-    var a = + prompt("a","3")
-    var b = + prompt("b","4")
+    var a = + prompt("a", "3")
+    var b = + prompt("b", "4")
     console.log(a * b)
 </script>
 
 <script id="ch0103/20">
-    var n = + prompt("n","3")
-    console.log(Math.pow(2,n))
+    var n = + prompt("n", "3")
+    console.log(Math.pow(2, n))
 </script>
 
 <script id="ch0104/01">
-    var N = + prompt("N","1")
-    if(N > 0){
+    var N = + prompt("N", "1")
+    if (N > 0) {
         console.log("positive")
     }
-    else if(N = 0){
+    else if (N = 0) {
         console.log("zero")
     }
-    else{
+    else {
         console.log("negative")
     }
 </script>
 
 <script id="ch0104/02">
-    var a = + prompt("a","-3.14")
+    var a = + prompt("a", "-3.14")
     console.log(Math.abs(a))
 </script>
 
 <script id="ch0104/03">
-    var n = + prompt("n","5")
-    if(n % 2 != 0){
+    var n = + prompt("n", "5")
+    if (n % 2 != 0) {
         console.log("odd")
-    }else{
+    } else {
         console.log("even")
     }
 </script>
 
 <script id="ch0104/04">
-    var a = prompt("a","A")
-    if(a.charCodeAt(0) != 0){
+    var a = prompt("a", "A")
+    if (a.charCodeAt(0) != 0) {
         console.log("YES")
-    }else{
+    } else {
         console.log("NO")
     }
 </script>
 
 <script id="ch0104/05">
-    var x = + prompt("x","1000")
-    var y = + prompt("y","100")
-    if(x > y){
+    var x = + prompt("x", "1000")
+    var y = + prompt("y", "100")
+    if (x > y) {
         console.log(">")
-    }else if(x < y){
+    } else if (x < y) {
         console.log("<")
-    }else
-    console.log("=")
+    } else
+        console.log("=")
 </script>
 
 <script id="ch0104/06">
-    var a = + prompt("a","54")
-    if(a <=99 && a >=10)
-    console.log("1")
+    var a = + prompt("a", "54")
+    if (a <= 99 && a >= 10)
+        console.log("1")
     else
-    console.log("0")
+        console.log("0")
 </script>
 
 <script id="ch0104/07">
-    var a = + prompt("a","11")
-    var b = + prompt("b","19")
-    if(a >=10 || b>=20)
-    console.log("1")
+    var a = + prompt("a", "11")
+    var b = + prompt("b", "19")
+    if (a >= 10 || b >= 20)
+        console.log("1")
     else
-    console.log("0")
+        console.log("0")
 </script>
 
 <script id="ch0104/08">
-    var a = + prompt("a","15")
-    if(a % 3 == 0 && a % 5 == 0)
+    var a = + prompt("a", "15")
+    if (a % 3 == 0 && a % 5 == 0)
         console.log("YES")
     else
         console.log("NO")
 </script>
 
 <script id="ch0104/09">
-    var a = + prompt("a","105")
-    if(a % 3 == 0 && a % 5 == 0 && a % 7 == 0)
-    console.log("3 5 7")
-    else if(a % 3 == 0 && a % 5 == 0)
-    console.log("3 5")
-    else if(a % 3 == 0 && a % 7 == 0)
-    console.log("3 7")
-    else if(a % 5 == 0 && a % 7 == 0)
-    console.log("5 7")
-    else if(a % 3 == 0)
-    console.log("3")
-    else if(a % 5 == 0)
-    console.log("5")
-    else if(a % 7 == 0)
-    console.log("7")
+    var a = + prompt("a", "105")
+    if (a % 3 == 0 && a % 5 == 0 && a % 7 == 0)
+        console.log("3 5 7")
+    else if (a % 3 == 0 && a % 5 == 0)
+        console.log("3 5")
+    else if (a % 3 == 0 && a % 7 == 0)
+        console.log("3 7")
+    else if (a % 5 == 0 && a % 7 == 0)
+        console.log("5 7")
+    else if (a % 3 == 0)
+        console.log("3")
+    else if (a % 5 == 0)
+        console.log("5")
+    else if (a % 7 == 0)
+        console.log("7")
     else
-    console.log("n")
+        console.log("n")
 </script>
 
 <script id="ch0104/10">
-    var a = + prompt("a","50")
-    var b = + prompt("b","80")
-    if(a < 60 || b < 60)
-    console.log("1")
+    var a = + prompt("a", "50")
+    var b = + prompt("b", "80")
+    if (a < 60 || b < 60)
+        console.log("1")
     else
-    console.log("0")
+        console.log("0")
 </script>
 
 <script id="ch0104/11">
-    var a = + prompt("a","2")
-    if(a == 1 || a == 3 || a == 5)
-    console.log("NO")
+    var a = + prompt("a", "2")
+    if (a == 1 || a == 3 || a == 5)
+        console.log("NO")
     else
-    console.log("YES")
+        console.log("YES")
 </script>
 
 <script id="ch0104/12">
-    var a = + prompt("a","120")
-    if((a / 3 + 27 + 23) > (a / 1.2))
-    console.log("Walk")
-    else if((a / 3 + 27 + 23) < (a / 1.2))
-    console.log("Bike")
+    var a = + prompt("a", "120")
+    if ((a / 3 + 27 + 23) > (a / 1.2))
+        console.log("Walk")
+    else if ((a / 3 + 27 + 23) < (a / 1.2))
+        console.log("Bike")
     else
-    console.log("All")
+        console.log("All")
 </script>
 
 <script id="ch0104/13">
-    var N = + prompt("N","1.0")
+    var N = + prompt("N", "1.0")
     var y = 0
-    if(N >= 0 && N < 5)
-    console.log((2.5 - N).toFixed(3))
-    else if(N < 10)
-    console.log((2 - 1.5 * (N - 3) * (N - 3)).toFixed(3))
+    if (N >= 0 && N < 5)
+        console.log((2.5 - N).toFixed(3))
+    else if (N < 10)
+        console.log((2 - 1.5 * (N - 3) * (N - 3)).toFixed(3))
     else
-    console.log((N / 2 - 1.5).toFixed(3))
+        console.log((N / 2 - 1.5).toFixed(3))
 </script>
 
 <script id="ch0104/14">
-    var a = + prompt("a","1200")
-    var b = prompt("b","y")
-    if(a < 1000 && b == "n")
-    console.log(8)
-    else if(a < 1000 && b == "y")
-    console.log(8 + 5)
-    else if(a > 1000 && b == "n")
-    console.log((Math.ceil((a - 1000) / 500) * 4 + 8))
+    var a = + prompt("a", "1200")
+    var b = prompt("b", "y")
+    if (a < 1000 && b == "n")
+        console.log(8)
+    else if (a < 1000 && b == "y")
+        console.log(8 + 5)
+    else if (a > 1000 && b == "n")
+        console.log((Math.ceil((a - 1000) / 500) * 4 + 8))
     else
-    console.log((Math.ceil((a - 1000) / 500) * 4 + 8) + 5)
+        console.log((Math.ceil((a - 1000) / 500) * 4 + 8) + 5)
 </script>
 
 <script id="ch0104/15">
-    var a = + prompt("a","10")
-    var b = + prompt("b","20")
-    var c = + prompt("c","56")
+    var a = + prompt("a", "10")
+    var b = + prompt("b", "20")
+    var c = + prompt("c", "56")
     console.log((a > b ? a : b) > c ? (a > b ? a : b) : c)
 </script>
 
 <script id="ch0104/16">
-    var a = + prompt("a","3")
-    var b = + prompt("b","4")
-    var c = + prompt("c","5") 
-    if(((a + b) > c && Math.abs(a - b) < c) || ((a + c) > b && Math.abs(a - c) < b) || ((c + b) > a && Math.abs(c - b) < a))
-    console.log("yes")
+    var a = + prompt("a", "3")
+    var b = + prompt("b", "4")
+    var c = + prompt("c", "5")
+    if (((a + b) > c && Math.abs(a - b) < c) || ((a + c) > b && Math.abs(a - c) < b) || ((c + b) > a && Math.abs(c - b) < a))
+        console.log("yes")
     else
-    console.log("no")
+        console.log("no")
 </script>
 
 <script id="ch0104/17">
-    var a = + prompt("a","2006")
-    if(a % 4 == 0 && a % 100 != 0 || a % 400 == 0 && a % 3200 != 0)
-    console.log("Y")
+    var a = + prompt("a", "2006")
+    if (a % 4 == 0 && a % 100 != 0 || a % 400 == 0 && a % 3200 != 0)
+        console.log("Y")
     else
-    console.log("N")
+        console.log("N")
 </script>
 
 <script id="ch0104/18">
-    var x = + prompt("x","1")
-    var y = + prompt("y","1")
-    if((x >= -1 && x <= 1 ) && (y >= -1 && y <= 1))
-    console.log("yes")
+    var x = + prompt("x", "1")
+    var y = + prompt("y", "1")
+    if ((x >= -1 && x <= 1) && (y >= -1 && y <= 1))
+        console.log("yes")
     else
-    console.log("no")
+        console.log("no")
 </script>
 
 <script id="ch0104/19">
-    var a = + prompt("a","1")
-    var b = + prompt("b","2")
-    var c = prompt("c","+")
-    if(c == "/" && b == 0)
-    console.log("Divided by zero!")
-    else if(c == "/" && b != 0)
-    console.log(a / b)
-    else if(c == "+")
-    console.log(a + b)
-    else if(c == "-")
-    console.log(a - b)
-    else if(c == "*")
-    console.log(a * b) 
+    var a = + prompt("a", "1")
+    var b = + prompt("b", "2")
+    var c = prompt("c", "+")
+    if (c == "/" && b == 0)
+        console.log("Divided by zero!")
+    else if (c == "/" && b != 0)
+        console.log(a / b)
+    else if (c == "+")
+        console.log(a + b)
+    else if (c == "-")
+        console.log(a - b)
+    else if (c == "*")
+        console.log(a * b)
     else
-    console.log("Invalid operator!")
+        console.log("Invalid operator!")
 </script>
 
 <script id="ch0104/20">
-    var a = + prompt("a","1.0")
-    var b = + prompt("b","2.0")
-    var c = + prompt("c","8.0")
+    var a = + prompt("a", "1.0")
+    var b = + prompt("b", "2.0")
+    var c = + prompt("c", "8.0")
     var d = b * b - 4 * a * c
     var x1 = -b + Math.sqrt(d / 2 / a)
     var x2 = -b - Math.sqrt(d / 2 / a)
-    if(d == 0)
-    console.log("x1=x2=" + x1.toFixed(5))
-    else if(d > 0)
-    console.log("x1=" + x1.toFixed(5) +";x2=" + x2.toFixed(5))
-    else 
-    console.log("x1=" + (-b/2/a).toFixed(5)+ "+" +((Math.sqrt(-d))/2/a).toFixed(5) + "i;x2=" + (-b/2/a).toFixed(5)+ "-" +((Math.sqrt(-d))/2/a).toFixed(5)+"i")
+    if (d == 0)
+        console.log("x1=x2=" + x1.toFixed(5))
+    else if (d > 0)
+        console.log("x1=" + x1.toFixed(5) + ";x2=" + x2.toFixed(5))
+    else
+        console.log("x1=" + (-b / 2 / a).toFixed(5) + "+" + ((Math.sqrt(-d)) / 2 / a).toFixed(5) + "i;x2=" + (-b / 2 / a).toFixed(5) + "-" + ((Math.sqrt(-d)) / 2 / a).toFixed(5) + "i")
 </script>
 
 <script id="ch0104/21">
-    var n = + prompt("n","10")
-    var x = + prompt("x","4")
-    var y = + prompt("y","9")
+    var n = + prompt("n", "10")
+    var x = + prompt("x", "4")
+    var y = + prompt("y", "9")
     console.log(Math.trunc(n - y / x))
 </script>
 
 <script id="ch0105/01">
     var a = 0
     var n = + prompt("n")
-    for(var i = 0;i < n;i ++){
+    for (var i = 0; i < n; i++) {
         var b = + prompt("b")
         a = a + b
         var c = a / n
@@ -364,7 +485,7 @@
 
 <script id="ch0105/02">
     var a = 0
-    for(var i = 0;i < 12;i ++){
+    for (var i = 0; i < 12; i++) {
         var b = + prompt("b")
         a = a + b
         var c = a / 12
@@ -375,7 +496,7 @@
 <script id="ch0105/03">
     var a = 0
     var n = + prompt("n")
-    for(var i = 0;i < n;i ++){
+    for (var i = 0; i < n; i++) {
         var b = + prompt("b")
         a = a + b
         var c = a / n
@@ -386,7 +507,7 @@
 <script id="ch0105/04">
     var a = 0
     var n = + prompt("n")
-    for(var i = 0;i < n;i ++){
+    for (var i = 0; i < n; i++) {
         var b = + prompt("b")
         a = a + b
         var c = Number(a / n)
@@ -397,7 +518,7 @@
 <script id="ch0105/05">
     var a = 0
     var n = + prompt("n")
-    for(var i = 0;i < n;i ++){
+    for (var i = 0; i < n; i++) {
         var b = + prompt("b")
         a = (a > b) ? a : b
     }
@@ -408,7 +529,7 @@
     var a = 0
     var c = 0
     var n = + prompt("n")
-    for(var i = 0;i < n;i ++){
+    for (var i = 0; i < n; i++) {
         var b = + prompt("b")
         a = (a > b) ? a : b
         c = (c < b) ? c : b
@@ -421,14 +542,14 @@
     var aa = 0
     var bb = 0
     var cc = 0
-    for(var i = 0;i < n;i ++){
+    for (var i = 0; i < n; i++) {
         var a = + prompt("a")
         var b = + prompt("b")
         var c = + prompt("c")
         aa = aa + a
         bb = bb + b
         cc = cc + c
-        var num = aa + bb + cc   
+        var num = aa + bb + cc
     }
     console.log(aa + ' ' + bb + ' ' + cc + ' ' + num)
 </script>
@@ -436,7 +557,7 @@
 <script id="ch0105/08">
     var n = + prompt("n")
     var a = (n - 2) * 180
-    for(var i = 0;i < (n - 1);i ++){
+    for (var i = 0; i < (n - 1); i++) {
         var b = + prompt("b")
         a = a - b
     }
@@ -447,9 +568,9 @@
     var m = + prompt("m")
     var n = + prompt("n")
     var a = 0
-    for(var i = m;i <= n;i ++){
-        if(i % 2 != 0)
-        a = a + i
+    for (var i = m; i <= n; i++) {
+        if (i % 2 != 0)
+            a = a + i
     }
     console.log(a)
 </script>
@@ -458,9 +579,9 @@
     var m = + prompt("m")
     var n = + prompt("n")
     var a = 0
-    for(var i = m;i <= n;i ++){
-        if(i % 17 == 0)
-        a = a + i
+    for (var i = m; i <= n; i++) {
+        if (i % 17 == 0)
+            a = a + i
     }
     console.log(a)
 </script>
@@ -470,12 +591,12 @@
     var a = 0
     var b = 0
     var c = 0
-    for(var i = 0;i < k;i ++){
+    for (var i = 0; i < k; i++) {
         var m = + prompt("m")
-        switch(m){
-            case 1: a ++; break;
-            case 5: b ++; break;
-            case 10: c ++; break;
+        switch (m) {
+            case 1: a++; break;
+            case 5: b++; break;
+            case 10: c++; break;
         }
     }
     console.log(a + ' ' + b + ' ' + c)
@@ -485,10 +606,10 @@
     var N = + prompt("N")
     var m = + prompt("m")
     var b = 0
-    for(var i = 0;i < N;i ++){
+    for (var i = 0; i < N; i++) {
         var a = + prompt("a")
-        if(a == m)
-        b ++
+        if (a == m)
+            b++
     }
     console.log(b)
 </script>
@@ -497,7 +618,7 @@
     var a = + prompt("a")
     var n = + prompt("n")
     var b = 1
-    for(var i = 0;i < n;i ++){
+    for (var i = 0; i < n; i++) {
         b = b * a
     }
     console.log(b)
@@ -506,7 +627,7 @@
 <script id="ch0105/14">
     var x = + prompt("x")
     var n = + prompt("n")
-    for(var i = 0;i < n;i ++){
+    for (var i = 0; i < n; i++) {
         x = x * 1.001
     }
     console.log(x.toFixed(4))
@@ -516,7 +637,7 @@
     var R = + prompt()
     var M = + prompt()
     var Y = + prompt()
-    for(var i = 0;i < Y;i ++){
+    for (var i = 0; i < Y; i++) {
         M = (R / 100 + 1) * M
     }
     console.log(Math.trunc(M))
@@ -527,16 +648,16 @@
     var K = + prompt()
     var M = 200
     var i = 1
-    var n = N 
-    while(n <= M){  
-        i ++
+    var n = N
+    while (n <= M) {
+        i++
         n = N * i
         M = M * (K / 100 + 1)
     }
-    if(i > 20)
+    if (i > 20)
         console.log("Impossible")
     else
-    console.log(i)
+        console.log(i)
 </script>
 
 <script id="ch0105/17">
@@ -544,14 +665,14 @@
     var b = 1
     var c = 0
     var k = + prompt("k")
-    if(k == 1 || k == 2)
+    if (k == 1 || k == 2)
         c = 1
-    else 
-    for(var i = 2;i < k;i ++){
-        c = a + b
-        a = b
-        b = c
-    }
+    else
+        for (var i = 2; i < k; i++) {
+            c = a + b
+            a = b
+            b = c
+        }
     console.log(c)
 </script>
 
@@ -560,21 +681,21 @@
     var bb = + prompt("bb")
     var cc = + prompt("cc")
     var a = cc / bb
-    for(var i = 1;i < n;i ++){
+    for (var i = 1; i < n; i++) {
         var b = + prompt("b")
         var c = + prompt("c")
         var d = c / b
-        if((d - a) > 0.05)
-        console.log("better")
-        else if((a - d) > 0.05)
-        console.log("worse")
+        if ((d - a) > 0.05)
+            console.log("better")
+        else if ((a - d) > 0.05)
+            console.log("worse")
         else console.log("same")
     }
 </script>
 
 <script id="ch0105/19">
     var n = + prompt()
-    for(var i = 0;i < n;i ++){
+    for (var i = 0; i < n; i++) {
         var x = + prompt()
         var y = + prompt()
         var a = + prompt()
@@ -587,7 +708,7 @@
 <script id="ch0105/20">
     var h = + prompt()
     var H = h
-    for(var i = 1;i < 9;i ++){
+    for (var i = 1; i < 9; i++) {
         h = h / 2
         H = H + h * 2
     }
@@ -599,19 +720,19 @@
 
 <script id="ch0105/21">
     var N = + prompt()
-    if(N == 1)
-    console.log("End")
-    else{
+    if (N == 1)
+        console.log("End")
+    else {
         var n = N
-        while(n != 1){
-            if(n % 2 != 0){
+        while (n != 1) {
+            if (n % 2 != 0) {
                 console.log(n + '*3+1=' + (n * 3 + 1))
                 n = n * 3 + 1
-            }else{
+            } else {
                 console.log(n + '/2=' + (n / 2))
                 n = n / 2
-            }  
-        }  
+            }
+        }
         console.log("End")
     }
 </script>
@@ -621,34 +742,34 @@
     var n = 0
     var b = 0
     var B = 1
-    for(var i = 1;i <= 12;i ++){
+    for (var i = 1; i <= 12; i++) {
         var a = + prompt()
         m = m + 300
-        if(m >= a){
+        if (m >= a) {
             n = Math.trunc((m - a) / 100) * 100
             m = m - a - n
             b = b + n
-        }else{
+        } else {
             var X = -i
             B = 0
         }
     }
-    if(B == 1){
+    if (B == 1) {
         b = b * 1.2 + m
         console.log(b)
-    }else if(B == 0)
-    console.log(X)
+    } else if (B == 0)
+        console.log(X)
 </script>
 
 <script id="ch0105/23">
     var m = + prompt()
     var n = + prompt()
     var i = 0
-    for(var j = 0;j < n;j ++){
+    for (var j = 0; j < n; j++) {
         var a = + prompt()
-        if(m > a){
+        if (m > a) {
             m = m - a
-            i ++
+            i++
         }
     }
     console.log(n - i)
@@ -657,11 +778,11 @@
 <script id="ch0105/24">
     var n = + prompt("n")
     var j = 0
-    for( var i = 0;i < n;i ++){
+    for (var i = 0; i < n; i++) {
         var a = + prompt()
         var b = + prompt()
-        if(a >= 90 && a <= 140 && b >= 60 && b <= 90)
-        j ++
+        if (a >= 90 && a <= 140 && b >= 60 && b <= 90)
+            j++
         else j = 0
     }
     console.log(j)
@@ -684,15 +805,15 @@
 </script> -->
 
 <script id="ch0105/25">
-    for(var n = 49;n <= (9*9*9-1);n ++){
+    for (var n = 49; n <= (8 * 8 * 8 - 1); n++) {
         var seven1 = n % 7
         var seven2 = (n - seven1) / 7 % 7
         var seven3 = ((n - seven1) / 7 - seven2) / 7 % 7
         var nine1 = n % 9
         var nine2 = (n - nine1) / 9 % 9
         var nine3 = ((n - nine1) / 9 - nine2) / 9 % 9
-        if(seven1 == nine3 && seven2 == nine2 && seven3 == nine1){
-            
+        if (seven1 == nine3 && seven2 == nine2 && seven3 == nine1) {
+            console.log('' + n, '' + seven3 + seven2 + seven1, '' + nine3 + nine2 + nine1)
         }
     }
     // eg: 128 / 6 = 21 ... 2
@@ -704,10 +825,10 @@
 <script id="ch0105/26">
     var n = + prompt()
     var j = 0
-    for(var i = 0;i < n;i ++){
+    for (var i = 0; i < n; i++) {
         var a = + prompt()
-        if((a%1000%100%10 - Math.trunc(a/1000) - Math.trunc(a%1000/100) - Math.trunc(a%1000%100/10)) > 0) 
-        j ++
+        if ((a % 1000 % 100 % 10 - Math.trunc(a / 1000) - Math.trunc(a % 1000 / 100) - Math.trunc(a % 1000 % 100 / 10)) > 0)
+            j++
     }
     console.log(j)
 </script>
@@ -715,9 +836,9 @@
 <script id="ch0105/27">
     var K = + prompt()
     var Sn = 0
-    for(var i = 1;i < 100;i ++){
+    for (var i = 1; i < 100; i++) {
         Sn = Sn + 1 / i
-        if(Sn > K){
+        if (Sn > K) {
             console.log(i)
             break;
         }
@@ -730,22 +851,22 @@
     var y = ''
     var b = ''
     var c = ''
-    for(var i = 1;i <= 10;i ++){
-        if(i == 1){
-            b = x % 10 + ' '   
+    for (var i = 1; i <= 10; i++) {
+        if (i == 1) {
+            b = x % 10 + ' '
         }
-        if(x >= 100){
-        y = (Math.trunc(x / 10)) % 10
-        c = c + y + ' '
-        x = Math.trunc(x / 10)
+        if (x >= 100) {
+            y = (Math.trunc(x / 10)) % 10
+            c = c + y + ' '
+            x = Math.trunc(x / 10)
         }
-        if(x >= 10 && x < 100){
-        y = (Math.trunc(x / 10)) % 10
-        x = Math.trunc(x / 10)
-        c = c + y
+        if (x >= 10 && x < 100) {
+            y = (Math.trunc(x / 10)) % 10
+            x = Math.trunc(x / 10)
+            c = c + y
         }
-        if(x < 10)
-        break;       
+        if (x < 10)
+            break;
     }
     console.log(b + c)
 </script>
@@ -753,22 +874,22 @@
 <script id="ch0105/29">
     var a = + prompt()
     var f = 1
-    if(a < 0){
+    if (a < 0) {
         f = -f
         a = -a
     }
     var x = a
     var b = ''
     var c = ''
-    for(var i = 1;i <= 10;i ++){
-        if(i == 1){
-            b = x % 10  
+    for (var i = 1; i <= 10; i++) {
+        if (i == 1) {
+            b = x % 10
         }
         var y = (Math.trunc(x / 10)) % 10
         c = c + y
         x = Math.trunc(x / 10)
-        if(x < 10) 
-        break;       
+        if (x < 10)
+            break;
     }
     console.log((b + c) * f)
 </script>
@@ -779,41 +900,41 @@
     var M = m
     var x = 0
     var j = 0
-    for(var i = 1;i <= 10;i ++){
-        if(i == 1){
+    for (var i = 1; i <= 10; i++) {
+        if (i == 1) {
             y = M % 10
-            if(y == 3)
-            j ++
-        }else
-        y = (Math.trunc(M / 10)) % 10
-        if(y == 3)
-        j ++
+            if (y == 3)
+                j++
+        } else
+            y = (Math.trunc(M / 10)) % 10
+        if (y == 3)
+            j++
         M = Math.trunc(M / 10)
-        if(M < 10)
-        break;
+        if (M < 10)
+            break;
     }
-    if(m % 19 == 0 && j == k)
-    console.log("YES")
+    if (m % 19 == 0 && j == k)
+        console.log("YES")
     else
-    console.log("NO")
+        console.log("NO")
 </script>
 
 <script id="ch0105/31">
     var n = + prompt("灯")
     var m = + prompt("人")
     var s = ""
-    for(var i = 1;i <= n;i ++){
+    for (var i = 1; i <= n; i++) {
         var f = true
-        for(var j = 1;j <= m;j ++){
-            if(i % j == 0){
+        for (var j = 1; j <= m; j++) {
+            if (i % j == 0) {
                 f = !f
             }
         }
-        if(!f && i != 1){
-            s = s + "," + i   
+        if (!f && i != 1) {
+            s = s + "," + i
         }
     }
-    console.log("1"+s)
+    console.log("1" + s)
 </script>s
 
 <script id="ch0105/32">
@@ -822,7 +943,7 @@
     var a
     var b = q / p
     var n = + prompt()
-    for(var i = 1;i < n;i ++){
+    for (var i = 1; i < n; i++) {
         a = p + q
         p = q
         q = a
@@ -835,7 +956,7 @@
     var n = + prompt()
     var a = -1
     var b = 0
-    for(var i = 1;i <= n;i ++){
+    for (var i = 1; i <= n; i++) {
         a = -a
         b = b + 1 / i * a
     }
@@ -846,8 +967,8 @@
     var n = + prompt()
     var a = 0
     var b = 1
-    for(var i = 1;i <= n;i ++){
-        for(var j = 1; j <= i;j ++){
+    for (var i = 1; i <= n; i++) {
+        for (var j = 1; j <= i; j++) {
             b = b * j
         }
         a = a + b
@@ -861,8 +982,8 @@
     var a = 0
     var b = 1
     var c = 1
-    for(var i = 1;i <= n;i ++){
-        for(var j = 1; j <= i;j ++){
+    for (var i = 1; i <= n; i++) {
+        for (var j = 1; j <= i; j++) {
             b = b * j
         }
         a = b
@@ -877,8 +998,8 @@
     var n = + prompt()
     var a = 1
     var b = x
-    for(var j = 1;j <= n; j ++){
-        for(var i = 1;i <= (j - 1);i ++){
+    for (var j = 1; j <= n; j++) {
+        for (var i = 1; i <= (j - 1); i++) {
             b = b * x
         }
         a = a + b
@@ -891,9 +1012,9 @@
     var M = + prompt()
     var N = + prompt()
     var X = + prompt()
-    while(X >= 0){
+    while (X >= 0) {
         X = X - Math.ceil(M / N)
-        if(X < 0 || N > M){
+        if (X < 0 || N > M) {
             break;
         }
         N = N + Math.floor(M / N)
@@ -903,16 +1024,16 @@
 
 <script id="ch0105/38">
     var n = + prompt()
-    for(var i = 0;i < n;i ++){
+    for (var i = 0; i < n; i++) {
         var a = + prompt()
-        for(var j = a;j >= 0;j --){
+        for (var j = a; j >= 0; j--) {
             var b = + prompt()
-            if(a == 0){
+            if (a == 0) {
                 console.log(0)
                 break;
             }
-            if(j == 0)
-            break;
+            if (j == 0)
+                break;
             console.log(j * b)
         }
     }
@@ -921,22 +1042,22 @@
 <script id="ch0105/39">
     var n = + prompt()
     var s = 0
-    for(var j = 1;j <= n;j ++){
+    for (var j = 1; j <= n; j++) {
         var x = j
-        for(var i = 1;i <= 10;i ++){
+        for (var i = 1; i <= 10; i++) {
             var M = x
-            if(i == 1){
+            if (i == 1) {
                 var y = M % 10
-                if(y != 7 && x % 7 != 0)
-                s = s + x * x
+                if (y != 7 && x % 7 != 0)
+                    s = s + x * x
                 break;
-            }else
-            y = (Math.trunc(M / 10)) % 10
-            if(y != 7 && x % 7 != 0)
-            s = s + x * x
+            } else
+                y = (Math.trunc(M / 10)) % 10
+            if (y != 7 && x % 7 != 0)
+                s = s + x * x
             M = Math.trunc(M / 10)
-            if(M < 10)
-            break;
+            if (M < 10)
+                break;
         }
     }
     console.log(s)
@@ -945,21 +1066,21 @@
 <script id="ch0105/40">
     var n = + prompt()
     var k = 0
-    for(var i = 1;i <= n;i ++){
+    for (var i = 1; i <= n; i++) {
         var a = i
-        for(var j = 1;j <= 10;j ++){
+        for (var j = 1; j <= 10; j++) {
             var b = a
-            if(i == 1){
+            if (i == 1) {
                 var c = b % 10
-                if(c == 1)
-                k ++
-            }else
-            c = (Math.trunc(b / 10)) % 10
-            if(c == 1)
-            k ++
+                if (c == 1)
+                    k++
+            } else
+                c = (Math.trunc(b / 10)) % 10
+            if (c == 1)
+                k++
             b = Math.trunc(b / 10)
-            if(b < 10)
-            break;
+            if (b < 10)
+                break;
         }
     }
     console.log(k)
@@ -969,21 +1090,21 @@
     var m = + prompt()
     var n = + prompt()
     var k = 0
-    for(var i = m;i <= n;i ++){
+    for (var i = m; i <= n; i++) {
         var a = i
-        for(var j = 1;j <= 10;j ++){
+        for (var j = 1; j <= 10; j++) {
             var b = a
-            if(j == 1){
+            if (j == 1) {
                 var c = b % 10
-                if(c == 2)
-                k ++
-            }else
-            c = (Math.trunc(b / 10)) % 10
-            if(c == 2)
-            k ++
+                if (c == 2)
+                    k++
+            } else
+                c = (Math.trunc(b / 10)) % 10
+            if (c == 2)
+                k++
             b = Math.trunc(b / 10)
-            if(b < 10)
-            break;
+            if (b < 10)
+                break;
         }
     }
     console.log(k) 
@@ -994,25 +1115,25 @@
     var b = + prompt("列")
     var c = prompt()
     var d = + prompt()
-    for(var i = 1;i <= a;i ++){
+    for (var i = 1; i <= a; i++) {
         var m = ''
-        if((i == 1 || i == a) && d == 0){
-            for(var j = 1;j <= b;j ++){
+        if ((i == 1 || i == a) && d == 0) {
+            for (var j = 1; j <= b; j++) {
                 m = m + c
             }
             console.log(m)
         }
-        if((i > 1 && i < a) && d == 0){
-            for(j = 1;j <= b;j ++){
-                if(j == 1 || j == b){
+        if ((i > 1 && i < a) && d == 0) {
+            for (j = 1; j <= b; j++) {
+                if (j == 1 || j == b) {
                     m = m + c
-                }else
-                m = m + ' '
+                } else
+                    m = m + ' '
             }
             console.log(m)
         }
-        if(d == 1){
-            for(j = 1;j <= b; j ++){
+        if (d == 1) {
+            for (j = 1; j <= b; j++) {
                 m = m + c
             }
             console.log(m)
@@ -1022,58 +1143,57 @@
 
 <script id="ch0105/43">
     var n = + prompt()
-    for(var i = 1;i <= n;i ++){
+    for (var i = 1; i <= n; i++) {
         var k = 0
         var K = 0
-        var a 
+        var a
         var b
-        for(var j = 1;j <= i;j ++){
-            if(i % j == 0)
-            k ++
+        for (var j = 1; j <= i; j++) {
+            if (i % j == 0)
+                k++
         }
-        if(k == 2){
+        if (k == 2) {
             a = i
             b = n / a
-            for(j = 1;j <= b;j ++){
-                if(b % j == 0)
-                K ++
+            for (j = 1; j <= b; j++) {
+                if (b % j == 0)
+                    K++
             }
-            if(K == 2){
-                console.log(((a > b)?a:b))
+            if (K == 2) {
+                console.log(((a > b) ? a : b))
                 break;
-            }       
-        }   
+            }
+        }
     }
 </script>
 
 <script id="ch0105/44">
     var n = + prompt()
     var x = 0
-    for(var i = 1;i <= 10000;i ++){
-        var k = 0 
-        for(var j = 1;j <= i;j ++){
-            if(i % j == 0)
-            k ++
+    for (var i = 1; i <= 10000; i++) {
+        var k = 0
+        for (var j = 1; j <= i; j++) {
+            if (i % j == 0)
+                k++
         }
-        if(k == 2){
+        if (k == 2) {
             var a = i
-            x ++ 
+            x++
         }
-        if(x == n){
+        if (x == n) {
             console.log(a)
             break;
-        }  
+        }
     }
 </script>
 
 <script id="ch0105/45">
     var n = + prompt()
     var sum = 0
-    for(var i = 1;i <= n;i ++){
+    for (var i = 1; i <= n; i++) {
         n = n - i
         sum = sum + i * i
     }
     sum = sum + n * i
     console.log(sum)
 </script>
-

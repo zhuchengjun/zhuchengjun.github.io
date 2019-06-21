@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>画图</title>
+    <style>
+        canvas {
+            border: 2px solid #f0f;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="400" height="300"></canvas>
+</body>
+<script>
+    var canvas = document.querySelector('canvas')
+    canvas.style.imageRendering = 'pixelated'
+    var ctx = canvas.getContext('2d')
+
+    function dot(x, y, color = 'black') {
+        ctx.fillStyle = color
+        ctx.fillRect(x, y, 1, 1)
+    }
+</script>
+<script>
+    // YOUR CODE GOES BELOW
+    //画一条实线
+    for (x = 50; x <= 350; x++) {
+        dot(x, 50, color = 'black')
+    }
+    //画一条一个实点一个空点的虚线
+    for (x = 50; x <= 350; x++) {
+        if (x % 2 == 0) {
+            dot(x, 60, color = 'black')
+        }
+    }
+    //画一条两个实点两个空点的虚线
+    for (x = 50; x <= 350; x++) {
+        dot(x, 70, color = 'black')
+        dot(x + 1, 70, color = 'black')
+        x += 3
+    }
+    //画一条三个实点两个空点的虚线
+    for (x = 50; x <= 350; x++) {
+        dot(x, 80, color = 'black')
+        dot(x + 1, 80, color = 'black')
+        dot(x + 2, 80, color = 'black')
+        x += 4
+    }
+    //画一条45度的斜线
+    for (x = 0; x <= 300; x++) {
+        dot(x, x, color = 'blue')
+    }
+    //画一条跨越画布左上角和右下角的对角线
+    for (x = 0; x <= 400; x++) {
+        dot(x, (3 / 4 * x), color = 'blue')
+    }
+    //画一个空心矩形
+    for (x = 20; x <= 50; x++) {
+        dot(x, 90, color = 'green')
+        dot(x, 120, color = 'green')
+    }
+    for (y = 90; y <= 120; y++) {
+        dot(20, y, color = 'green')
+        dot(50, y, color = 'green')
+    }
+    //画一个实心矩形
+    for (x = 60; x <= 90; x++) {
+        for (y = 90; y <= 120; y++) {
+            dot(x, y, color = 'green')
+        }
+    }
+    //画一个rgb色彩空间的某一面
+    for (var i = 0; i <= 255; i++) {
+        var x = i;
+        var g = (255 - i);
+        for (var j = 0; j <= 255; j++) {
+            var y = 150 + j;
+            var r = (255 - j);
+            dot(x, y, color = "rgb(" + r + "," + g + ",255)");
+        }
+    }
+    //画一个空心的圆
+    for (x = 200; x <= 260; x++) {
+        for (y = 80; y <= 140; y++) {
+            var r = Math.pow(x - 230, 2) + Math.pow(y - 110, 2)
+            if (Math.sqrt(r) <= 30 && Math.sqrt(r) > 29) {
+                dot(x, y, color = 'red')
+            }
+        }
+    }
+    //画一个实心的圆
+    for (x = 270; x <= 330; x++) {
+        for (y = 80; y <= 140; y++) {
+            var r = Math.pow(x - 300, 2) + Math.pow(y - 110, 2)
+            if (Math.sqrt(r) < 30 && Math.sqrt(r) >= 0) {
+                dot(x, y, color = 'red')
+            }
+        }
+    }
+    //画一个大小合适的sin(x)的图像
+    for (var i = 1; i < 200; i += 0.1) {
+        x = i * 10
+        y = Math.sin(i) * 10 + 200
+        dot(x, y, color = 'orange')
+    }
+
+</script>
+
+</html>
