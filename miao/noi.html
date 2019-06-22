@@ -23,12 +23,34 @@
     else
         console.log('NO')
 </script>
-<script id="sort">
-    var a = + prompt()
-    var b = + prompt()
-    var c = + prompt()
 
+<script id="sort">
+    var a = +prompt();
+    var b = +prompt();
+    var c = +prompt();
+    if (a < b && a < c) {
+        if (b < c) {
+            console.log(a, b, c);
+        } else {
+            console.log(a, c, b);
+        }
+    }
+    if (b < a && b < c) {
+        if (a < c) {
+            console.log(b, a, c);
+        } else {
+            console.log(b, c, a);
+        }
+    }
+    if (c < b && c < a) {
+        if (a < b) {
+            console.log(c, a, b);
+        } else {
+            console.log(c, b, a);
+        }
+    }
 </script>
+
 <script id="narcissistic">//判断数是否是水仙花数
     var n = + prompt()
     var m = n
@@ -54,17 +76,17 @@
     else
         console.log("NO")   
 </script>
+
 <script id="narcissistics">
     for (var j = 1; j < 10000; j++) {
-        var n = j
-        var m = n
+        var m = j
         var width = 0
         while (m > 0) {
             width++
             var digit = m % 10
             m = (m - digit) / 10
         }
-        m = n
+        m = j
         var sum = 0
         while (m > 0) {
             var digit = m % 10
@@ -75,10 +97,152 @@
             sum = sum + product
             m = (m - digit) / 10
         }
-        if (sum == n)
-            console.log(n)
+        if (sum == j)
+            console.log(j)
     }
 </script>
+
+<script id="palindrom">
+    var isPalindrom = function (n) {
+        var sum = 0
+        var m = n
+        while (n > 0) {
+            var digit = n % 10
+            sum = sum * 10 + digit
+            n = (n - digit) / 10
+        }
+        return sum == m
+    }
+    var n = + prompt()
+    if (isPalindrom(n))
+        console.log("YES")
+    else
+        console.log("NO")
+</script>
+
+<!-- <script>
+    var isPalindrom = function(m){
+        var width = 0 
+        while (m > 0) {
+            width++
+            var digit = m % 10
+            m = (m - digit) / 10
+        }
+        for(var i = 1;i<= m/2;i++){
+            var right = Math.floor(m / Math.pow(10,(i-1))) % 10
+            var left = Math.floor(m / Math.pow(10,(width - i))) % 10
+            if(right !== left)
+            return false
+        }
+        return true
+    }
+    var n = +prompt()
+    if(isPalindrom(n))
+    console.log("YES")
+    else 
+    console.log("NO")
+</script> -->
+
+<script id="weekday">
+    var year = +prompt()
+    var month = +prompt()
+    var y = 1900
+    var m = 1
+    var w = 1
+    var m31 = 3
+    var m30 = 3
+    var feb = 0
+    var weekday = 1
+    var y1 = year - y
+    var m1 = month - m
+    for (var i = 0; i < y1; i++) {
+        if (((i + y) % 4 == 0) && ((i + y) % 100 != 0) || ((i + y) % 400 == 0) && ((i + y) % 3200 != 0)) {
+            w += 2
+        } else {
+            w++
+        }
+        if (w > 6) {
+            w -= 7
+        }
+    }
+    for (var j = 0; j < m1; j++) {
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0) && (year % 3200 != 0)) {
+            feb = 1
+        }
+        if (j == 3 || j == 5 || j == 8 || j == 10) {
+            w += 2
+        } else if (j == 1) {
+            w += feb
+        } else {
+            w += 3
+        }
+        if (w > 6) {
+            w -= 7
+        }
+    }
+    console.log(w)
+</script>
+
+<script id="complete-number">
+    //100以内的约数可分成两组，以平方根100为限，求1至10的约数a即可知道10至100的约数b，a*b=n
+    var isCompleteNumer = function (n) {
+        var sum = 1
+        var sqrt_n = Math.floor(Math.sqrt(n))//取平方根判断次数
+        for (var i = 2; i < sqrt_n; i++) {
+            if (n % i == 0) {
+                sum += i + (n / i)
+            }
+        }
+        //考虑只有一个根的情况
+        if (sqrt_n * sqrt_n == n && sqrt_n !== n) {
+            sum += sqrt_n
+        }
+        return sum == n
+    }
+    var n = +prompt(n)
+    if (isCompleteNumer(n))
+        console.log("YES")
+    else
+        console.log("NO")
+</script>
+<!-- <script id="complete-number"> 
+    var isCompleteNumber = function(n){
+        var sum = 0
+        for(var i=0;i<n;i++){
+            if(n % i == 0){
+                sum += i
+            }
+        }
+        if(sum == n)
+        return true
+    }
+    var n = +prompt()
+    if(isCompleteNumber(n))
+    console.log("YES")
+    else
+    console.log("NO")
+</script> -->
+
+<script id="complete-numbers">
+    var isCompleteNumer = function (n) {
+        var sum = 1
+        var sqrt_n = Math.floor(Math.sqrt(n))//取平方根判断次数
+        for (var i = 2; i < sqrt_n; i++) {
+            if (n % i == 0) {
+                sum += i + (n / i)
+            }
+        }
+        if (sqrt_n * sqrt_n == n && sqrt_n !== n) {
+            sum += sqrt_n
+        }
+        return sum == n
+    }
+    for (var i = 1; i < 1000; i++) {
+        if (isCompleteNumer(i))
+            console.log(i)
+    }
+</script>
+
 <script id="prime">
     var isPrime = function (n) {
         if (n < 2)
@@ -95,21 +259,23 @@
     else
         console.log("NO")
 </script>
+
 <script id="primes">
-    for(var i = 1;i <= 100;i ++){
+    for (var i = 1; i <= 100; i++) {
         var count = 0
         if (i < 2)
-        continue
+            continue
         else {
-            for(var j = 1;j <= i;j++){
-                if(i % j == 0)
-                count ++
+            for (var j = 1; j <= i; j++) {
+                if (i % j == 0)
+                    count++
             }
-            if(count == 2)
-            console.log(i)
+            if (count == 2)
+                console.log(i)
         }
     }
 </script>
+
 <script id="itob">
     var isString = function (n) {
         var s = n.toString()
@@ -118,19 +284,35 @@
     var n = + prompt()
     console.log(isString(n))
 </script>
-<script id="lcf&lcm">
 
+<script id="lcf&lcm">
+    var a = +prompt();
+    var b = +prompt();
+    if (a > b) {
+        var c
+        c = a
+        a = b
+        b = a
+    }
+    for (var i = a; i >= 1; i--) {
+        if (a % i == 0 && b % i == 0) {
+            console.log(i);
+            break;
+        }
+    }
+    for (var i = b; ; i++) {
+        if (i % a == 0 && i % b == 0) {
+            console.log(i);
+            break;
+        }
+    }
 </script>
+
 <script id="sqrt">
     var a = + prompt()
     var b = Math.sqrt(a)
     console.log(b.toFixed(3))
 </script>
-
-
-
-
-
 
 <script id="ch0103/01">
     var A = + prompt("A", "1")
