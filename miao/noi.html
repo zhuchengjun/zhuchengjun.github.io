@@ -2,7 +2,8 @@
     var isRelatedwith7 = function (n){
         if (n % 7 == 0) {
             return true
-        } else {
+        } 
+        else {
             while (n > 0) {
                 var digit = n % 10
                 if (digit == 7) {
@@ -10,8 +11,8 @@
                 }
                 n = (n - digit) / 10
             }
-            return false
         }
+        return false
     }
     var getNumber = function (hint) {
         return +prompt(hint)
@@ -58,7 +59,7 @@
     while (m > 0) {
         width++
         var digit = m % 10
-        m = (m - digit) / 10
+        m = Math.floor((m - digit) / 10)
     }
     m = n
     var sum = 0
@@ -69,7 +70,7 @@
             product = product * digit
         }
         sum = sum + product
-        m = (m - digit) / 10
+        m = Math.floor((m - digit) / 10)
     }
     if (sum == n)
         console.log("YES")
@@ -84,7 +85,7 @@
         while (m > 0) {
             width++
             var digit = m % 10
-            m = (m - digit) / 10
+            m = Math.floor((m - digit) / 10)
         }
         m = j
         var sum = 0
@@ -95,7 +96,7 @@
                 product = product * digit
             }
             sum = sum + product
-            m = (m - digit) / 10
+            m = Math.floor((m - digit) / 10)
         }
         if (sum == j)
             console.log(j)
