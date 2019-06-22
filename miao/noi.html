@@ -13,11 +13,15 @@
             return false
         }
     }
-    var N = + prompt()
-    if (isRelatedwith7(N))
-        console.log("YES")
+    var getNumber = function(hint){
+        return + prompt(hint)
+    }
+    var N = getNumber('请输入')
+    if (isRelatedwith7(N)){
+        console.log('YES')
+    }  
     else
-        console.log("NO")
+        console.log('NO')
 </script>
 <script id="sort">
     var a = + prompt()
@@ -28,24 +32,24 @@
 <script id="narcissistic">//判断数是否是水仙花数
     var n = + prompt()
     var m = n
-    var width = 0
+    var width = 0 //判断输入几位数
     while (m > 0) {
-        width++
+        width ++
         var digit = m % 10
         m = (m - digit) / 10
     }
     m = n
     var sum = 0
-    var product = 1
     while (m > 0) {
         var digit = m % 10
+        var product = 1
         for (var i = 1; i <= width; i++) {
             product = product * digit
         }
         sum = sum + product
         m = (m - digit) / 10
     }
-    if (sum = n)
+    if (sum == n)
         console.log("YES")
     else
         console.log("NO")   
@@ -56,22 +60,22 @@
         var m = n
         var width = 0
         while (m > 0) {
-            width++
+            width ++
             var digit = m % 10
             m = (m - digit) / 10
         }
         m = n
         var sum = 0
-        var product = 1
         while (m > 0) {
             var digit = m % 10
+            var product = 1
             for (var i = 1; i <= width; i++) {
                 product = product * digit
             }
             sum = sum + product
             m = (m - digit) / 10
         }
-        if (sum = n)
+        if (sum == n)
             console.log(n)
     }
 </script>
@@ -92,6 +96,15 @@
         console.log("NO")
 </script>
 <script id="primes">
+    var isPrime = function (n) {
+        if (n < 2)
+            return false
+        for (var i = 2; i < n; i++) {
+            if (n % i == 0)
+                return false
+        }
+        return true
+    }
     for (var i = 1; i <= 100; i++) {
         if (isPrime(i))
             console.log(i)
