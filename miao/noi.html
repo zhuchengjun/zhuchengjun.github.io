@@ -1,8 +1,8 @@
 <script id="7">
-    var isRelatedwith7 = function (n){
+    var isRelatedwith7 = function (n) {
         if (n % 7 == 0) {
             return true
-        } 
+        }
         else {
             while (n > 0) {
                 var digit = n % 10
@@ -103,7 +103,7 @@
     }
 </script>
 
-<script id="palindrom">
+<script id="palindrom">//方法1
     var isPalindrom = function (n) {
         var sum = 0
         var m = n
@@ -121,7 +121,7 @@
         console.log("NO")
 </script>
 
-<!-- <script>
+<!-- <script>//方法2
     var isPalindrom = function(m){
         var width = 0 
         while (m > 0) {
@@ -145,43 +145,55 @@
 </script> -->
 
 <script id="weekday">
-    var year = +prompt()
-    var month = +prompt()
-    var y = 1900
-    var m = 1
-    var w = 1
-    var m31 = 3
-    var m30 = 3
-    var feb = 0
-    var weekday = 1
-    var y1 = year - y
-    var m1 = month - m
-    for (var i = 0; i < y1; i++) {
-        if (((i + y) % 4 == 0) && ((i + y) % 100 != 0) || ((i + y) % 400 == 0) && ((i + y) % 3200 != 0)) {
-            w += 2
-        } else {
-            w++
+    function weekday(year, month) {
+        var days = 0
+        for (var y = 1; y < year; y++) {
+            if (isLeapYear(y)) {
+                days += 366
+            } else {
+                days += 365
+            }
         }
-        if (w > 6) {
-            w -= 7
+        for (var m = 1; m < month; m++) {
+            days += getMonthDays(year, m)
+        }
+        return (days + 1) % 7
+    }
+    function isLeapYear(year) {
+        if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0 && year % 3200 != 0)
+            return true
+        else
+        return false
+    }
+    function getMonthDays(year,m) {
+        switch(m) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                return 31
+            case 2:
+                if(isLeapYear)
+                    return 29
+                else
+                    return 28
+            default:
+                return 30
         }
     }
-    for (var j = 0; j < m1; j++) {
-        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0) && (year % 3200 != 0)) {
-            feb = 1
+    //方法二优化
+    function weekday2(year, month) {
+        var y = year - 1
+        var days = y * 365 + Math.floor(y / 4) - Math.floor(y / 100) + Math.floor(y / 400)
+        for (var m = 1; m < month; m++) {
+            days += getMonthDays(year, m)
         }
-        if (j == 3 || j == 5 || j == 8 || j == 10) {
-            w += 2
-        } else if (j == 1) {
-            w += feb
-        } else {
-            w += 3
-        }
-        if (w > 6) {
-            w -= 7
-        }
+        return (days + 1) % 7
     }
-    console.log(w)
+
 </script>
 
 <script id="complete-number">
@@ -984,7 +996,7 @@
     console.log(j)
 </script>
 
-<!-- <script id="ch0105/25">
+<!-- <script id="ch0105/25">//方法1
     var a = 0
     var b = ''
     var c = ''
@@ -999,8 +1011,20 @@
         }   
     }
 </script> -->
-
-<script id="ch0105/25">
+<!-- <script>//方法2：使用遍历3个位上的所有数字的办法实现
+    for (var a = 0; a < 7; a++) {//满足条件每位数字不超过七进制0-6
+        for (var b = 0; b < 7; b++) {
+            for (var c = 0; c < 7; c++) {
+                var base7 = a * 49 + b * 7 + c
+                var base9 = c * 81 + b * 9 + a
+                if (base9 == base7) {
+                    console.log(base7, '' + a + b + c, '' + c + b + a)
+                }
+            }
+        }
+    }
+</script> -->
+<script id="ch0105/25">//方法3
     for (var n = 49; n <= (8 * 8 * 8 - 1); n++) {
         var seven1 = n % 7
         var seven2 = (n - seven1) / 7 % 7
@@ -1131,7 +1155,7 @@
         }
     }
     console.log("1" + s)
-</script>s
+</script>
 
 <script id="ch0105/32">
     var p = 1
